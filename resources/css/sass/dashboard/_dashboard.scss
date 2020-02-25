@@ -1,0 +1,142 @@
+.clients {
+
+
+    padding:20px;
+    //background-color: red;
+    
+    // max-height: 300px;
+	// overflow-y:scroll;
+
+
+
+    
+
+    &__header {
+        
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr 70px;
+        grid-template-areas:"cb cb cb cb"
+                            "titulo_email titulo_nome titulo_data vazio";
+
+
+
+       
+
+        &__head2 {
+            grid-area: cb;
+           
+
+        }
+
+        &__email {
+            font-size: 15px;
+            grid-area: titulo_email;
+            padding-left: 10px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+           
+        }
+
+        &__nome {
+            font-size: 15px;
+            grid-area: titulo_nome;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            position: relative;
+            left: -5px;
+        } 
+        &__data {
+            font-size: 15px;
+            grid-area: titulo_data;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            position: relative;
+            left: -10px;
+
+
+        }
+        
+    }
+
+    &__results {
+        border: 3px solid $color-black;
+        box-shadow: 10px 10px 20px rgba($color-black, .2);
+        max-height: 200px;
+        overflow-y:auto;
+
+
+        &__row{
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr 70px ;
+            grid-template-areas:"primeiro segundo terceiro quarto";
+
+            &__email {
+                grid-area:primeiro;
+                text-align: left;
+                padding-left: 10px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+              
+
+            }
+            &__name {
+                grid-area:segundo;
+                text-align: left;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                
+
+            }
+            &__data {
+                grid-area:terceiro;
+                text-align: left;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                
+            }
+            &__delete {
+                grid-area:quarto;
+                text-align: left;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                
+
+                &__link {
+                    text-decoration: none;
+                    color: $color-black;
+                    &__content {
+                        height:30px;
+                        width: 60px;
+                        border-radius: 12px;
+                        display:grid;
+                        background-color: $color-red;
+                        &:hover {
+                        background-color: $color-red-light;
+                        }
+                        &__p {
+                            display: inline-block;
+                            text-align: center;
+                            position: relative;
+                            top: 5px;
+
+                        }
+                        position: relative;
+                        top: -10px;
+                        
+
+                    }
+                    
+                }
+                
+
+            }
+        }
+        
+
+    }
+
+
+
+
+
+}

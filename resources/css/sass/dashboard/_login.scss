@@ -1,0 +1,97 @@
+
+
+.login { //#fp_wrapper
+    font-size: 12px; 
+    font-family: Arial, sans-serif;
+
+    &__title { //#fp_wrapper h1
+        
+        background-image: radial-gradient(  rgba($color-primary-light, .8) , rgba($color-primary-dark, 1));
+
+
+
+
+        padding: 10px 20px; 
+        font-size: 16px; 
+        font-weight:normal; 
+        color: white; 
+        margin: 0; 
+    }
+
+    &__content {//#fp_content
+        padding: 20px; 
+        overflow: hidden; 
+
+        &__form {
+
+            display:grid;
+            grid-template-rows: 1fr;
+            grid-area:"error"
+                    "username"
+                    "password"
+                    "submit";
+            justify-items: center;
+            align-items: center;
+
+
+            &__wrapper {
+
+
+                &__alerts { //#fp_wrapper .alerts
+
+                    &__error {
+                        grid-area:error;
+                        
+                        background: #fce9e9; 
+                        border:1px solid red; 
+                        color:red; 
+                        //padding: 8px;  
+                        margin-bottom: 3px; 
+                        list-style: none;
+                        
+
+                        
+
+
+
+
+                        
+                    }
+            }
+
+            
+
+            &__username {
+                grid-area: username;
+                background-color: red;
+                clear: both;
+                overflow: hidden;
+            }
+
+            &__password {
+                grid-area: password;
+                background-color: blue;
+                clear: both;
+                overflow: hidden;
+                
+            }
+
+            &__submit {
+                grid-area: submit;
+
+            }
+        }
+    }
+
+
+    
+
+        
+
+    }
+
+
+
+
+
+}

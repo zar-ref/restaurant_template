@@ -1,0 +1,16 @@
+{
+  "name": "Restaurante",
+  "version": "1.0.0",
+  "description": "Restaurante",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss style.css -w",
+    "start": "npm-run-all watch:sass"
+  },
+  "author": "Zarref",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.5.3",
+    "npm-run-all": "^4.1.1"
+  }
+}

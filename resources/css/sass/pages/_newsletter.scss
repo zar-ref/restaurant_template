@@ -1,0 +1,127 @@
+
+
+.form {
+
+    background-color: $color-secondary-lighter;
+    padding: 20px;
+
+    &__heading {
+        text-align: center;
+    }
+
+
+
+
+
+
+    &__group:not(:last-child) {
+        margin-bottom: 20px;
+
+    }
+
+
+    &__input {
+        font-size: 15px;
+        font-family: inherit;
+        color: inherit;
+        padding: 15px 20px;
+        border-radius: 2px;
+        background-color: rbga($color-white, .5);
+        border: none;
+        border-bottom: 3px solid transparent;
+        width: 90%;
+        display: block;
+        transition: all .3s;
+
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 10px 20px rgba($color-black, .1);
+            border-bottom: 3px solid $color-primary;
+        }
+
+        &:focus:invalid {
+            border-bottom: 3px solid $color-secondary-dark;
+        }
+
+        &::-webkit-input-placeholder {
+            color: $color-grey-dark-2;
+        }
+    }
+
+    
+
+    &__label {
+        font-size: 12px;
+        font-weight: 700;
+        margin-left: 20px;
+        margin-top: 7px;
+        display: block;
+        transition: all .3s;
+    }
+
+    &__input:placeholder-shown + &__label {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-40px);
+    }
+
+
+
+    &__btn {
+
+
+        &,
+        &:link,
+        &:visited {
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 15px 40px;
+            display: inline-block; /*fazer sempre isto sempre q se da tqamahos*/
+            border-radius: 100px;
+            transition: all .2s;
+            position: relative;
+            
+
+            //Change for the <button> element
+            border: none;
+            cursor:pointer;
+            
+
+        }
+
+        &:hover
+        {
+            transform: translateY(-3px); /*para cima sao vlores negativox*/
+            box-shadow: 0 10px 20px rgba($color-black, .2); /* x , y , blur , color*/
+
+            &after {
+                transform: scaleX(1.4) scaleY(1.6);
+            
+                opacity: 0;
+        
+            }
+        }
+        &:active,
+        &:focus { /*quando se carrega chama-se active*/
+            outline: none;
+            transform: translateY(-1px);
+            box-shadow: 0 5px 10px rgba($color-black, .2); /* x , y , blur , color*/
+
+        }
+
+        &--primary {
+            background-color: $color-primary;
+            color:$color-white;
+            
+            
+    
+            &::after {
+                background-color: $color-primary;
+        
+        
+            }
+    
+        }
+    }
+}

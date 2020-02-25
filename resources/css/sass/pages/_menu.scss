@@ -1,0 +1,930 @@
+
+.menuList {
+    list-style-type: none;   
+    padding-left: 0;
+    
+
+
+
+    &__header {
+        list-style-type: none;   
+        padding-left: 0;
+        display: none;
+        
+       
+    }
+
+    &__content {
+        list-style-type: none;   
+        padding-left: 0;
+        display: none;
+        
+        
+    }
+
+}
+
+
+.menu {
+
+    
+    
+
+    &__title {
+       
+        padding: 10px;
+        background-color: $color-primary-light;
+        margin-bottom: 5px;
+        margin-top: 5px;
+
+        
+
+    }
+
+
+    &__subTitle {
+        display:grid;
+        grid-template-columns: 1fr max-content;
+        grid-template-areas: "title delete";
+        position: relative;
+        //align-items: center;
+
+
+        &__title {
+            background-color: $color-secondary-light;
+            
+            grid-area: title;
+            display: inline-block;
+            &:hover {
+                background-color: $color-secondary-lighter;
+
+            }
+
+            
+            &__edit {
+
+                border:1px solid $color-secondary-dark;
+                position: absolute;                 
+                display: block; 
+                overflow:hidden; 
+                text-indent: -9999px; 
+                outline: none; 
+                background: url(../images/trans.gif); 
+
+                z-index: 99;
+                 
+                 &:hover, &__hover {
+                    background: url(../images/edit_bg.png);
+                }
+
+            }
+        
+
+        }
+
+        &__type {
+            
+            display: none;
+            padding: 4px 18px 0; 
+            background: url(../images/edit_type.gif) top center no-repeat;
+            color:#fff;
+            font-size: 11px;
+            position:absolute; 
+            top:-25px; 
+            //left: 12.5%;
+            height: 25px;
+            text-decoration: none;
+            z-index: 100;
+        }
+
+
+        &__delete {
+           
+            grid-area: delete;
+            padding: 7.5px;
+            display: grid;
+            text-decoration: none;
+            color: black;
+             background-color: $color-red;
+                &:hover {
+                    background-color: $color-red-light;
+                }
+            &__content {
+                
+                align-self: center;
+
+
+            }
+
+
+
+        }
+        &__content {
+            grid-area: title;
+            font-size: 30px;
+            font-weight: 600;
+            padding: 10px;
+        }
+    }
+    
+    
+
+    &__items {
+     
+        &__add-row {
+            background-color: yellow;
+          
+
+            //display: none;
+
+        }
+
+
+    }
+
+
+}
+
+.menuEdit {
+
+
+    
+    /*
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "nome description description price";
+*/
+ 
+
+    &__row {
+        display: grid;
+        grid-template-columns: 1fr 2fr 75px 50px;
+        grid-template-areas: "nome description price delete";
+        
+
+        position: relative; 
+
+
+    &__type {
+        position: relative;
+   
+            &__name {
+            
+             
+                display: none; 
+                padding: 4px 18px 0; 
+                background: url(../images/edit_type.gif) top center no-repeat;
+                color:#fff;
+                font-size: 11px;
+                position:absolute; 
+                top:-25px; 
+                //left: 12.5%;
+                height: 25px;
+                text-decoration: none;
+                z-index: 100;
+                
+
+
+             }
+
+             &__description {
+              
+                display: none; 
+                
+
+                //&:hover, &__hover {
+                padding: 4px 18px 0; 
+                background: url(../images/edit_type.gif) top center no-repeat;
+                color:#fff;
+                font-size: 11px;
+                position:absolute; 
+                //right: 50%;
+                top:-25px;           
+                height: 25px;
+                text-decoration: none;
+                z-index: 100;  
+            
+                //}    
+     
+             }
+     
+             &__price {
+                 
+                display: none; 
+                padding: 4px 18px 0; 
+                background: url(../images/edit_type.gif) top center no-repeat;
+                color:#fff;
+                font-size: 11px;
+                position:absolute; 
+                top:-25px; 
+                //left: 87.5%; 
+                height: 25px;
+                text-decoration: none;
+                z-index: 100;    
+                
+
+             }
+
+             
+
+    
+        }
+
+        &__link {
+            position: relative;
+         
+
+           
+            &__name {
+                
+                border:1px solid $color-primary-light;
+                background-color: $color-primary-lighter;
+                position: absolute;                 
+                display: block; 
+                overflow:hidden; 
+                text-indent: -9999px; 
+                outline: none; 
+                background: url(../images/trans.gif); 
+                //padding: 10px;
+
+                z-index: 99;
+                 
+                 &:hover, &__hover {
+                    background: url(../images/edit_bg.png);
+                }
+                 
+             }
+     
+             &__description {
+                border:1px solid $color-secondary-light;
+                background-color: $color-secondary-lighter;
+                position: absolute;
+                display: block; 
+                overflow:hidden; 
+                text-indent: -9999px; 
+                outline: none; 
+                background: url(../images/trans.gif); 
+                z-index: 99;
+                 &:hover, &__hover {
+                    background: url(../images/edit_bg.png);
+                }
+     
+             }
+
+     
+             &__price {
+                 
+                border:1px solid $color-primary-light;
+                position: absolute; 
+                
+                display: block; 
+                overflow:hidden; 
+                text-indent: -9999px; 
+                outline: none; 
+                background: url(../images/trans.gif); 
+                z-index: 99;
+                &:hover, &__hover {
+                    background: url(../images/edit_bg.png);
+                }
+                
+             }
+             
+             
+             &__delete {
+                
+                text-decoration: none;
+                color: $color-black;
+                
+                &__content {
+                   text-align: center;                
+
+                   background-color: $color-red;
+                    &:hover {
+                        background-color: $color-red-light;
+                    }
+                   width: 50px;
+                   &__span {
+                       line-height: 1.5;
+                       display: inline-block;
+                       vertical-align: middle;
+                   }
+                    
+                }
+                
+             }
+
+        }
+
+
+
+        &__name {
+            
+            grid-area: nome;
+            display:grid;
+            background-color: $color-primary-lighter;
+            &__content {
+                align-self: center;
+                justify-self: left;
+                padding: 10px;
+            }
+            
+        }
+
+        &__description {
+           // width:100%;
+            //background-color: green;
+            background-color: $color-secondary-lighter;
+            grid-area: description;
+            display:grid;
+            
+            &__content {
+                align-self: center; //eixo dos yy
+                justify-self: left; ///eixo dos xx
+                padding: 10px;
+
+
+            }
+            
+        }
+
+        &__price {
+
+        
+            grid-area: price;
+            display:grid;
+            background-color: $color-primary-lighter;
+            &__content {
+                
+                align-self: center; //eixo dos yy
+                justify-self: center; ///eixo dos xx
+                padding:10px;                
+            }
+        
+        }
+
+        &__delete {
+
+            grid-area: delete;
+            
+        }
+    
+    
+        &__add {
+            margin: 5px;
+            margin-left: 0px;
+            width: 100%;
+            display: grid; ///eixo dos xx
+
+            &__link {
+                background-color:$color-primary;
+                justify-self: right;
+                border-radius: 12px;
+
+                &:hover, :active {
+                    background-color: $color-primary-light;
+                    border-radius: 12px;
+                    text-decoration: none;
+                    color: $color-white;      
+                                  
+
+
+                }
+                text-decoration: none;
+                &__content {
+                    padding: 5px;
+                    text-align: center; 
+                    
+                    &__p {
+                        font-size: 20px;                      
+                        color: $color-white;                        
+                    }
+                }
+            }
+
+        }
+
+
+
+
+
+        &__menuSubtitle {
+            margin: 15px;
+            margin-left: 0px;
+            width: 100%;
+            display: grid; ///eixo dos xx
+
+
+            &__link {
+                text-decoration: none;
+                justify-self: left;
+                border-radius: 12px;
+                background-color:$color-secondary-dark;
+                &:hover, :active {
+                    background-color: $color-secondary-light;
+                    text-decoration: none;
+                    color: $color-white;
+               }
+
+                &__content {
+                    text-align: center; 
+                    padding:6px;
+                    &__p {
+                        font-size: 20px;
+                        color: $color-white;
+
+                    }
+        
+                }
+            }
+        }
+        
+    
+    }
+
+
+
+}
+
+
+.addRowWrapper { //aparece no colorbox
+
+    display: grid;
+    grid-template-areas:"nomeTag"
+                        "nome"
+                        "descriptionTag"
+                        "description"
+                        "priceTag"
+                        "price";
+
+                        &__nameTag {
+                            grid-area: nomeTag;
+                        }
+
+                        &__name {
+                            
+                            grid-area: nome;
+                        }
+
+                        &__descriptionTag {
+                            grid-area: descriptionTag;
+                        }
+
+                        &__description {
+                            grid-area: description;
+                        }
+
+                        &__priceTag {
+                            grid-area: priceTag;
+                        }
+
+                        &__price {
+                            grid-area: price;
+                        }
+                        
+}
+
+
+.addMainMenuRowWrapper { ///aparecer na colorbox
+    display:grid;
+    grid-template-areas:"tag"
+                        "type";
+
+                        &__menuTag {
+                            grid-area: tag;
+                        }
+                        &__menuType{
+                            grid-area: type;
+                        }
+        
+}
+
+
+.menuFetch {
+
+
+    &__subTitle {
+        font-size: 30px;
+        padding: 6px;
+        background-color: $color-secondary-dark;
+        cursor:pointer;
+
+    }
+
+    &__items {
+
+        &__header {
+            display: grid;
+            grid-template-columns: 1fr 2fr 75px;
+            grid-template-areas: "nome description price";
+
+            &__name {
+                grid-area: nome;
+                text-align: left;
+                padding: 10px;
+            }
+
+            &__description {
+                grid-area: description;
+                text-align: left;
+                padding: 10px;
+            }
+
+            &__price {
+                grid-area: price;
+                text-align: left;
+                padding: 10px;
+
+            }
+
+
+        }
+
+
+        &__row {
+
+            display: grid;
+            grid-template-columns: 1fr 2fr 75px;
+            grid-template-areas: "nome description price";
+
+
+            &__name{
+                box-sizing: border-box;
+                border: 2px solid black;
+                border-right: 1px solid black;
+                padding: 10px;
+                font-size: 15px;
+                grid-area: nome;
+                &:hover {
+                    background-color: lightgrey;
+                }
+                margin-bottom: 10px;
+            }
+
+            &__description {
+                box-sizing: border-box;
+                border: 2px solid black;
+                border-right: 1px solid black;
+                border-left: 1px solid black;
+                padding: 10px;
+                font-size: 15px;
+                grid-area: description;
+                &:hover {
+                    background-color: lightgrey;
+                }
+                margin-bottom: 10px;
+
+            }
+
+            &__price {
+                box-sizing: border-box;
+                border: 2px solid black;
+                border-left: 1px solid black;
+                padding: 10px;
+                font-size: 15px;
+                grid-area: price; 
+                &:hover {
+                    background-color: lightgrey;
+                }
+                margin-bottom: 10px;
+
+
+
+            }
+        }
+    }
+}
+
+
+/////////////prato do dia ////////////////////////////
+
+
+.mainDish {
+
+    &__title {
+        padding: 10px;
+        background-color: $color-primary-light;
+        margin-bottom: 5px;
+        margin-top: 5px;
+        text-align: center;
+
+    }
+
+    &__form{
+        background-color: $color-primary-lighter;
+        
+        
+
+
+        &__upload {
+
+        padding: 25px;
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "texto texto"
+                              "file button";
+
+            padding:10px;
+            margin-bottom: 15px;
+            margin-top: 15px;
+
+
+            &__file {
+                text-align: center;
+                grid-area: file;
+                padding: 10px;
+            }
+
+            &__text {
+                align-self: center;
+                text-align: center;
+                font-size: 25px;
+                grid-area:texto;
+                padding:10px;
+
+
+            }
+
+            &__button {
+                grid-area: button;
+                padding: 10px;
+            }
+        }
+    }
+
+
+
+    &__main {
+        display: grid;
+        grid-template-columns: 2fr 2fr 1fr;
+        grid-template-areas: "img img img"
+                             "nome nome price"
+                             "description description price";
+                                
+
+        &__pic {
+            
+            grid-area: img;
+            justify-self: center;
+            padding:10px;
+            margin:10px;
+
+        }
+
+        &__name {
+            grid-area: nome;
+            position: relative;
+            display:grid;
+            background-color: $color-secondary-lighter;
+
+            &__type {
+                display: none; 
+                padding: 4px 18px 0; 
+                background: url(../images/edit_type.gif) top center no-repeat;
+                color:#fff;
+                font-size: 11px;
+                position:absolute; 
+                top:-25px; 
+                
+                height: 25px;
+                text-decoration: none;
+                z-index: 100;
+
+                
+            }
+
+            &__link {
+                box-sizing:border-box;
+                border: 1px solid blue;
+                
+                position: absolute;                 
+                display: block; 
+                overflow:hidden; 
+                text-indent: -9999px; 
+                outline: none; 
+
+                
+                z-index: 99;
+                 
+                 &:hover, &__hover {
+                    background: url(../images/edit_bg.png);
+                }
+            }
+
+            &__content {
+                font-size: 15px;
+                padding:6px;
+                align-self: center;
+            }
+        }
+
+        &__description {
+            grid-area: description;
+            background-color: $color-secondary-lighter;
+            display:grid;
+            position: relative;
+
+
+            &__type {
+                display: none; 
+                padding: 4px 18px 0; 
+                background: url(../images/edit_type.gif) top center no-repeat;
+                color:#fff;
+                font-size: 11px;
+                position:absolute; 
+                top:-25px; 
+               
+                height: 25px;
+                text-decoration: none;
+                z-index: 100;
+
+                
+            }
+
+            &__link {
+                box-sizing:border-box;
+                border: 1px solid blue;
+                position: absolute;                 
+                display: block; 
+                overflow:hidden; 
+                text-indent: -9999px; 
+                outline: none; 
+                
+                z-index: 99;
+                 
+                 &:hover, &__hover {
+                    background: url(../images/edit_bg.png);
+                }
+            }
+
+            &__content {
+                font-size: 15px;
+                padding:6px;
+                align-self: center;
+               
+            }
+        }
+
+        &__price {
+            grid-area:price;
+            background-color: $color-primary-lighter;
+            position: relative;
+            display:grid;
+
+
+            &__type {
+                display: none; 
+                padding: 4px 18px 0; 
+                background: url(../images/edit_type.gif) top center no-repeat;
+                color:#fff;
+                font-size: 11px;
+                position:absolute; 
+                top:-25px; 
+                
+                height: 25px;
+                text-decoration: none;
+                z-index: 100;
+
+
+
+
+                
+            }
+
+            &__link {
+                box-sizing:border-box;
+                border:1px solid blue;
+                border-left: 0.5px solid blue;
+                position: absolute;                 
+                display: block; 
+                overflow:hidden; 
+                text-indent: -9999px; 
+                outline: none; 
+                
+                z-index: 99;
+                 
+                 &:hover, &__hover {
+                    background: url(../images/edit_bg.png);
+                }
+            }
+
+            &__content {
+                
+                text-align: center;
+                align-self: center;
+                font-size: 15px;
+                padding:6px;
+
+                
+                
+            }
+        }
+    }
+
+
+}
+
+.mainDishActivate {
+
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+    margin-bottom:10px;
+    margin-top: 10px;
+    
+    
+}
+
+.pratoPrincipal {
+    
+    &__title {
+        padding: 10px;
+        background-color: $color-primary-light;
+        margin-bottom: 5px;
+        margin-top: 5px;
+        text-align: center;
+
+    }
+
+
+
+
+    &__main {
+
+        display: grid;
+        grid-template-columns: 2fr 2fr 1fr;
+        grid-template-areas: "img img img"
+                             "nome nome price"
+                             "description description price";
+        &__pic {
+            grid-area: img;
+            justify-self: center;
+            padding:10px;
+            margin:10px;
+        }
+
+         &__name {
+            grid-area: nome;
+            box-sizing: border-box;
+            border: 2px solid black;
+            border-right: 1px solid black;
+            border-bottom:  1px solid black;
+            padding: 10px;
+            font-size: 15px;
+           
+           
+            &:hover {
+                background-color: lightgrey;
+            }
+
+            
+          
+        }
+
+        &__description {
+            grid-area: description;
+            box-sizing: border-box;
+            border: 2px solid black;
+            border-right: 1px solid black;
+            border-top:  1px solid black;
+            padding: 10px;
+            font-size: 15px;
+
+           
+            &:hover {
+                background-color: lightgrey;
+            }
+             margin-bottom: 10px;
+
+        }
+
+        &__price {
+            display: grid;
+            
+            grid-area: price;
+            box-sizing: border-box;
+            border: 2px solid black;
+            border-left: 1px solid black;
+            padding: 10px;
+            font-size: 15px;
+           
+           
+            &:hover {
+                background-color: lightgrey;
+            }
+            margin-bottom: 10px;
+            &__content {
+                align-self: center;
+                justify-self: center;
+                
+            }
+        
+
+
+        }   
+    
+    }
+}
+
+
+

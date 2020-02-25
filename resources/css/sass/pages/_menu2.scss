@@ -1,0 +1,25 @@
+.menu2 {
+  
+
+
+    &__heading{
+        color: $color-primary-dark;
+        text-align: center;
+        padding: 30px;
+    }
+
+    &__download {
+        width: 100%;
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        &__link {
+            color: $color-primary-dark;
+
+        }
+    }
+
+
+
+}
