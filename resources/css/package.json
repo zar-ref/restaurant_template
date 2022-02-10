@@ -10,7 +10,7 @@
   "author": "Zarref",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^4.5.3",
+    "node-sass": "^7.0.0",
     "npm-run-all": "^4.1.1"
   }
 }
